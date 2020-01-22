@@ -9,6 +9,8 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
         mAdapter = new MainPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(mAdapter);
     }
-
+    public static void start(Context context) {
+        context.startActivity(new Intent(context, MainActivity.class));
+    }
 
     private class MainPagerAdapter extends FragmentPagerAdapter {
 
