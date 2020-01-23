@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,10 +14,15 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.geektech.quizapp_gt_4_2.R;
+import com.geektech.quizapp_gt_4_2.main.MainViewModel;
+
+import java.util.Objects;
 
 public class SettingsFragment extends Fragment {
 
     private SettingsViewModel settingsViewModel;
+    private MainViewModel mainViewModel;
+    private TextView textView;
 
     public static SettingsFragment newInstance() {
         return new SettingsFragment();
@@ -31,19 +37,21 @@ public class SettingsFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        textView = view.findViewById(R.id.result);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-        settingsViewModel = ViewModelProviders.of(this)
+        settingsViewModel = ViewModelProviders.of(Objects.requireNonNull(getActivity()))
                 .get(SettingsViewModel.class);
-
-        settingsViewModel.message.observe(this, new Observer<String>() {
+        mainViewModel = ViewModelProviders.of(Objects.requireNonNull(getActivity()))
+                .get(MainViewModel.class);
+        mainViewModel.counter.observe(this, new Observer<Integer>() {
             @Override
-            public void onChanged(String s) {
-                Log.d("ololo", s);
+            public void onChanged(Integer integer) {
+                Log.e("TAG", "onChanged: " + integer);
+                textView.setText(integer.toString());
             }
         });
 

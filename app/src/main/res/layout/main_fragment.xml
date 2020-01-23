@@ -5,6 +5,21 @@
     android:layout_height="match_parent"
     tools:context=".main.MainFragment">
 
+    <Button
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="50dp"
+        android:text="@string/plus"
+        android:textSize="25sp" />
 
-
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:text="@string/minus"
+        android:textSize="25sp" />
 </FrameLayout>
