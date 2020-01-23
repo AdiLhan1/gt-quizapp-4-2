@@ -3,15 +3,15 @@
     <item
         android:id="@+id/navigation_main"
         android:icon="@drawable/group"
-        android:title="@string/title_cart" />
+        android:title="" />
     <item
         android:id="@+id/navigation_history"
         android:icon="@drawable/group_second"
-        android:title="@string/title_gifts" />
+        android:title="" />
     <item
         android:id="@+id/navigation_settings"
         android:icon="@drawable/group_third"
-        android:title="@string/title_shop" />
+        android:title="" />
 
 
 </menu>
