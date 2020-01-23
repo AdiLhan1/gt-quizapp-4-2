@@ -116,17 +116,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onPageSelected(int position) {
-            switch (position) {
-                case 0:
-                    navigation.setSelectedItemId(R.id.navigation_main);
-                    break;
-                case 1:
-                    navigation.setSelectedItemId(R.id.navigation_history);
-                    break;
-                case 2:
-                    navigation.setSelectedItemId(R.id.navigation_settings);
-                    break;
-            }
+            navigation.getMenu().getItem(position).setChecked(true);
+
         }
 
         @Override
