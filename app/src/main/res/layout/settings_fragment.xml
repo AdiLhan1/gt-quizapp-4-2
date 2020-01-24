@@ -5,9 +5,10 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="30sp" />
+        android:text="@string/settings"
+        style="@style/TitleText"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="19dp" />
 </FrameLayout>

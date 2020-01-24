@@ -2,6 +2,8 @@ package com.geektech.quizapp_gt_4_2.main;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +17,7 @@ import java.util.Objects;
 public class MainFragment extends CoreFragment {
 
     private MainViewModel mViewModel;
+    private TextView textView;
 
     public static MainFragment newInstance() {
         return new MainFragment();
@@ -28,6 +31,25 @@ public class MainFragment extends CoreFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        SeekBar seekBar = view.findViewById(R.id.seek_bar);
+        textView = view.findViewById(R.id.textview);
+        seekBar.setProgress(25);
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                textView.setText(String.valueOf(progress));
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     @Override
@@ -37,7 +59,6 @@ public class MainFragment extends CoreFragment {
         mViewModel = ViewModelProviders.of(Objects.requireNonNull(getActivity()))
                 .get(MainViewModel.class);
 
-        mViewModel.onLoginClick();
     }
 
 }

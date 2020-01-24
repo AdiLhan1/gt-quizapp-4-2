@@ -10,10 +10,6 @@ public class MainViewModel extends ViewModel {
         Log.d("ololo", "View model create");
     }
 
-    public void onLoginClick() {
-
-    }
-
     @Override
     protected void onCleared() {
         super.onCleared();
