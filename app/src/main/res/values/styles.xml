@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -15,17 +15,8 @@
         <item name="android:windowBackground">@drawable/splash_background</item>
     </style>
 
-    <style name="StyleButton">
-        <item name="android:background">@drawable/btn_stroke</item>
-        <item name="android:text">START</item>
-        <item name="android:textColor">@color/colorWhite</item>
-        <item name="android:textSize">15sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
     <style name="TitleText" parent="BoldText">
         <item name="android:textSize">24sp</item>
-        <item name="android:font" tools:targetApi="o">@font/bold</item>
     </style>
 
     <style name="BoldText">
@@ -34,7 +25,6 @@
 
     <style name="RegularText">
         <item name="android:fontFamily" />
-
     </style>
 
 </resources>

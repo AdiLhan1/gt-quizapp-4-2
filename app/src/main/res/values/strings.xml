@@ -10,10 +10,4 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="questions_amount">Questions amount:</string>
-    <string name="ten">10</string>
-    <string name="category">Category</string>
-    <string name="difficulty">Difficulty</string>
-    <string name="_25">25</string>
-    <string name="settings">Settings</string>
 </resources>

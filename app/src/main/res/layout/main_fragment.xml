@@ -5,100 +5,21 @@
     android:layout_height="match_parent"
     tools:context=".main.MainFragment">
 
-    <ImageView
-        android:layout_width="50dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="@dimen/marginStart_161dp"
-        android:layout_marginTop="@dimen/marginTop_89dp"
-        android:layout_marginEnd="@dimen/marginEnd_164dp"
-        android:layout_marginBottom="@dimen/marginBottom_503dp"
-        android:src="@drawable/tut" />
-
     <Button
-        style="@style/StyleButton"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="@dimen/marginStartandEnd_88dp"
-        android:layout_marginTop="474dp"
-        android:layout_marginEnd="87dp"
-        android:layout_marginBottom="@dimen/btn_marginBottom_145dp" />
-
-    <TextView
-        android:layout_width="117dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="203dp"
-        android:layout_marginEnd="191dp"
-        android:layout_marginBottom="448dp"
-        android:hint="@string/questions_amount"
-        android:textColor="#A9A9A9"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="17dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="201dp"
-        android:layout_marginEnd="178dp"
-        android:layout_marginBottom="450dp"
-        android:text="@string/_25"
-        android:textColor="#000"
-        android:textSize="15sp" />
-
-    <TextView
-        android:layout_width="81dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="270dp"
-        android:layout_marginEnd="227dp"
-        android:layout_marginBottom="388dp"
-        android:hint="@string/category"
-        android:textColor="#000"
-        android:textSize="12sp" />
-
-    <TextView
-        android:layout_width="81dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="351dp"
-        android:layout_marginEnd="227dp"
-        android:layout_marginBottom="398dp"
-        android:hint="@string/difficulty"
-        android:textColor="#000"
-        android:textSize="12sp" />
-
-
-    <Spinner
-        android:layout_width="240dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="295dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="335dp" />
-
-    <Spinner
-        android:layout_width="240dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="67dp"
-        android:layout_marginTop="371dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="335dp" />
-
-    <SeekBar
-        android:id="@+id/seek_bar"
-        android:layout_width="265dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="228dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="440dp"
-        android:max="50" />
-
-    <TextView
-        style="@style/BoldText"
+        android:id="@+id/plus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="32dp" />
+        android:layout_gravity="center"
+        android:layout_marginEnd="50dp"
+        android:text="@string/plus"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="50dp"
+        android:text="@string/minus"
+        android:textSize="25sp" />
 </FrameLayout>
